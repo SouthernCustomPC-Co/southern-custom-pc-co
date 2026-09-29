@@ -72,7 +72,7 @@ document.getElementById("quoteForm").addEventListener("submit",e=>{
  e.preventDefault();const f=new FormData(e.target);
  const subject=encodeURIComponent("Custom PC Quote Request — "+f.get("name"));
  const body=encodeURIComponent("Name: "+f.get("name")+"\nContact: "+f.get("contact")+"\nBudget: "+f.get("budget")+"\nService: "+f.get("service")+"\nGames / use: "+(f.get("games")||"Not specified")+"\nDetails: "+(f.get("details")||"None"));
- if(BUSINESS_EMAIL==="southerncustompcco@gmail.com"){document.getElementById("formMsg").innerHTML='<p style="color:#ffd38a">Almost ready! The site owner needs to replace YOUR_EMAIL@example.com in the setup section of index.html. After that, this form opens a prefilled email.</p>';return;}
+ if(BUSINESS_EMAIL==="YOUR_EMAIL@example.com"){document.getElementById("formMsg").innerHTML='<p style="color:#ffd38a">Almost ready! The site owner needs to replace YOUR_EMAIL@example.com in the setup section of index.html. After that, this form opens a prefilled email.</p>';return;}
  window.location.href="mailto:"+BUSINESS_EMAIL+"?subject="+subject+"&body="+body;
 });
 </script>
